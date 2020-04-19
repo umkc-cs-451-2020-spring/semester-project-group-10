@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchedulingLib;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -8,10 +9,18 @@ using System.Windows;
 
 namespace GradRooAte
 {
+
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application
     {
+        public LocalScheduler scheduler;
+
+        void Start(object Sender, StartupEventArgs args)
+        {
+            scheduler = new LocalScheduler();
+            scheduler.NewInstructor(new SchedulingLib.models.Instructor { FirstName = "Foo", LastName = "Bar" }) ;
+        }
     }
 }

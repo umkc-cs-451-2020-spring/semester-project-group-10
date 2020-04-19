@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "GradRooAte\Application.csproj", "{A0058057-5139-4669-B115-EFCEBCA40914}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchedulingLib", "SchedulingLib\SchedulingLib.csproj", "{4F41433C-4229-491E-8505-2091B6D55229}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A0058057-5139-4669-B115-EFCEBCA40914}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0058057-5139-4669-B115-EFCEBCA40914}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0058057-5139-4669-B115-EFCEBCA40914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F41433C-4229-491E-8505-2091B6D55229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F41433C-4229-491E-8505-2091B6D55229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F41433C-4229-491E-8505-2091B6D55229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F41433C-4229-491E-8505-2091B6D55229}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

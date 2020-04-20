@@ -28,7 +28,7 @@ namespace SchedulingLib.models
     {
         public int CourseId { get; set; }
         public string CourseName { get; set; }
-        public int CourseSize { get; get; }
+        public int CourseSize { get; set; }
 
         public List<Sections> Sections { get; set; }
     }

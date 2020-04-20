@@ -9,7 +9,7 @@ namespace SchedulingLib.models
         public int BuildingId { get; set; }
         public string BuildingName { get; set; }
 
-        public List<Rooms> Room { get; set; }
+        public List<Rooms> Rooms { get; set; }
     }
 
     public class Room
@@ -19,9 +19,9 @@ namespace SchedulingLib.models
         public string RoomNumber { get; set; }
 
         public int BuildingId { get; set; }
-        public Buildings Building { get; set;}
+        public Building Building { get; set;}
 
-        public List<Sections> Section { get; set; }
+        public List<Sections> Sections { get; set; }
     }
 
     public class Course
@@ -30,7 +30,7 @@ namespace SchedulingLib.models
         public string CourseName { get; set; }
         public int CourseSize { get; get; }
 
-        public List<Sections> Section { get; set; }
+        public List<Sections> Sections { get; set; }
     }
 
     public class Instructor
@@ -39,7 +39,7 @@ namespace SchedulingLib.models
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public List<Sections> Section { get; set; }
+        public List<Sections> Sections { get; set; }
     }
 
     public class Section

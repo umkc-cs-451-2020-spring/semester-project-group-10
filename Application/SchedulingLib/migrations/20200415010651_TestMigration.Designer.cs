@@ -17,9 +17,9 @@ namespace SchedulingLib.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.3");
 
-            modelBuilder.Entity("SchedulingLib.models.Instructor", b =>
+            modelBuilder.Entity("SchedulingLib.models.Instructors", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("InstructorId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -29,7 +29,7 @@ namespace SchedulingLib.Migrations
                     b.Property<string>("LastName")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+                    b.HasKey("InstructorId");
 
                     b.ToTable("Instructors");
                 });

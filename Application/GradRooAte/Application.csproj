@@ -5,7 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <StartWorkingDirectory>$(MSBuildProjectDirectory)</StartWorkingDirectory>
     <UseWPF>true</UseWPF>
-    <StartupObject></StartupObject>
+    <StartupObject>GradRooAte.App</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

@@ -13,7 +13,7 @@ namespace SchedulingLib
             context.Database.Migrate();
         }
 
-        public void NewInstructor(Instructors instructor)
+        public void NewInstructor(DatabaseModels instructor)
         {
             context.Instructors.Add(instructor);
             context.SaveChanges();

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SchedulingLib.models
 {
-    public class Buildings
+    public class Building
     {
         public int BuildingId { get; set; }
         public string BuildingName { get; set; }
@@ -12,7 +12,7 @@ namespace SchedulingLib.models
         public List<Rooms> Rooms { get; set; }
     }
 
-    public class Rooms
+    public class Room
     {
         public int RoomId { get; set; }
         public int RoomSize { get; set; }
@@ -24,7 +24,7 @@ namespace SchedulingLib.models
         public List<Sections> Sections { get; set; }
     }
 
-    public class Courses
+    public class Course
     {
         public int CourseId { get; set; }
         public string CourseName { get; set; }
@@ -33,7 +33,7 @@ namespace SchedulingLib.models
         public List<Sections> Sections { get; set; }
     }
 
-    public class Instructors
+    public class Instructor
     {
         public int InstructorId { get; set; }
         public string FirstName { get; set; }
@@ -42,9 +42,9 @@ namespace SchedulingLib.models
         public List<Sections> Sections { get; set; }
     }
 
-    public class Sections
+    public class Section
     {
-        public int Section_number { get; set; }
+        public int SectionId { get; set; }
         public string DayOfWeek { get; set; }
         public int StartTime { get; set; }
         public int EndTime { get; set; }
@@ -56,7 +56,7 @@ namespace SchedulingLib.models
         public Courses Courses { get; set; }
 
         public int InstructorId { get; set; }
-        public Instructors Instructors { get; set; }
+        public Instructor Instructors { get; set; }
 
     }
 }

@@ -50,10 +50,10 @@ namespace SchedulingLib.models
         public int EndTime { get; set; }
 
         public int RoomId { get; set; }
-        public Rooms Room { get; set; }
+        public Room Room { get; set; }
 
         public int CourseId { get; set; }
-        public Courses Course { get; set; }
+        public Course Course { get; set; }
 
         public int InstructorId { get; set; }
         public Instructor Instructor { get; set; }

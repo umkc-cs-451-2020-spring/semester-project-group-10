@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppWindows", "GradRooAte\AppWindows.csproj", "{A0058057-5139-4669-B115-EFCEBCA40914}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchedulingLib", "SchedulingLib\SchedulingLib.csproj", "{4F41433C-4229-491E-8505-2091B6D55229}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchedulingLibTest", "SchedulingLibTest\SchedulingLibTest.csproj", "{63D46870-5632-41D8-B1B2-C345BA80D352}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A0058057-5139-4669-B115-EFCEBCA40914}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0058057-5139-4669-B115-EFCEBCA40914}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0058057-5139-4669-B115-EFCEBCA40914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F41433C-4229-491E-8505-2091B6D55229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F41433C-4229-491E-8505-2091B6D55229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F41433C-4229-491E-8505-2091B6D55229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F41433C-4229-491E-8505-2091B6D55229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D46870-5632-41D8-B1B2-C345BA80D352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D46870-5632-41D8-B1B2-C345BA80D352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D46870-5632-41D8-B1B2-C345BA80D352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D46870-5632-41D8-B1B2-C345BA80D352}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

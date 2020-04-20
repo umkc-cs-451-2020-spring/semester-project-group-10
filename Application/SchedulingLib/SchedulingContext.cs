@@ -8,7 +8,7 @@ namespace SchedulingLib
 {
     class SchedulingContext : DbContext
     {
-        public DbSet<Instructors> Instructors { get; set; }
+        public DbSet<Instructor> Instructors { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlite("Data Source=courseSchedule.db");
     }

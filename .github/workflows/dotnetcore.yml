@@ -22,8 +22,8 @@ jobs:
       with:
         dotnet-version: 3.1.101
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore SchedulingLib
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build SchedulingLib --configuration Release --no-restore
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test SchedulingLib --no-restore --verbosity normal

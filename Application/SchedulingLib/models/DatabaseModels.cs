@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace SchedulingLib.models
@@ -38,7 +39,9 @@ namespace SchedulingLib.models
         public int InstructorId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public char Availability { get; set; }
+
+        [StringLength(1)]
+        public string Availability { get; set; }
 
         public List<Section> Sections { get; set; }
     }

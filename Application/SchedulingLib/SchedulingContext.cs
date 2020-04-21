@@ -10,6 +10,10 @@ namespace SchedulingLib
     {
         private readonly string sqliteDbPath;
 
+        public SchedulingContext() : this("default.grdb")
+        {
+        }
+
         public SchedulingContext(string sqliteDbPath)
         {
             this.sqliteDbPath = sqliteDbPath;

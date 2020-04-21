@@ -20,7 +20,7 @@ namespace AppWindows
         void Start(object Sender, StartupEventArgs args)
         {
             scheduler = LocalScheduler.Connect("./default.grdb");
-            scheduler.NewInstructor(new SchedulingLib.models.Instructor { FirstName = "Foo", LastName = "Bar" }) ;
+            scheduler.NewInstructor(new SchedulingLib.models.Instructor { FirstName = "Foo", LastName = "Bar" });
         }
     }
 }

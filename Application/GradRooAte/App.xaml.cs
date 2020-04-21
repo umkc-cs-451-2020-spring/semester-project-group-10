@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace GradRooAte
+namespace AppWindows
 {
 
     /// <summary>
@@ -15,11 +15,11 @@ namespace GradRooAte
     /// </summary>
     public partial class App : Application
     {
-        public LocalScheduler scheduler;
+        private static SchedulerClient scheduler;
 
         void Start(object Sender, StartupEventArgs args)
         {
-            scheduler = new LocalScheduler();
+            scheduler = LocalScheduler.Connect("./default.grdb");
             scheduler.NewInstructor(new SchedulingLib.models.Instructor { FirstName = "Foo", LastName = "Bar" }) ;
         }
     }

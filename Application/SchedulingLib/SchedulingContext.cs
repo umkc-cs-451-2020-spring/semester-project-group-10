@@ -6,8 +6,15 @@ using System.Text;
 
 namespace SchedulingLib
 {
-    class SchedulingContext : DbContext
+    internal class SchedulingContext : DbContext
     {
+        private readonly string sqliteDbPath;
+
+        public SchedulingContext(string sqliteDbPath)
+        {
+            this.sqliteDbPath = sqliteDbPath;
+        }
+
         public DbSet<Building> Buildings { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Section> Sections { get; set; }
@@ -15,6 +22,6 @@ namespace SchedulingLib
         public DbSet<Instructor> Instructors { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite("Data Source=courseSchedule.db");
+            => options.UseSqlite($"Data Source={sqliteDbPath}");
     }
 }

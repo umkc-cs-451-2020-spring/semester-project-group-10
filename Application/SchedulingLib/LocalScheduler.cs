@@ -6,17 +6,9 @@ namespace SchedulingLib
 {
     public class LocalScheduler
     {
-        private SchedulingContext context = new SchedulingContext();
-
-        public LocalScheduler()
+        public static SchedulerClient Connect(string path)
         {
-            context.Database.Migrate();
-        }
-
-        public void NewInstructor(Instructor instructor)
-        {
-            context.Instructors.Add(instructor);
-            context.SaveChanges();
+            return new LocalSchedulerClient(path);
         }
     }
 }

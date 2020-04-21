@@ -1,0 +1,29 @@
+﻿<Page x:Class="AppWindows.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:ctrl="clr-namespace:AppWindows.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="500"
+      Title="HomePage">
+
+    <StackPanel>
+        <Label Height="36" Grid.Row="0" FontWeight="Bold" FontSize="20">Data Entry</Label>
+        <StackPanel Orientation="Horizontal">
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Buildings" HorizontalAlignment="Left" />
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Rooms" HorizontalAlignment="Left" />
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Instructors" HorizontalAlignment="Left" />
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Courses" HorizontalAlignment="Left" />
+        </StackPanel>
+        <Label Height="36" Grid.Row="1" FontWeight="Bold" FontSize="20">Scheduling</Label>
+        <StackPanel Orientation="Horizontal">
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Classes" HorizontalAlignment="Left"/>
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Rules" HorizontalAlignment="Left"/>
+        </StackPanel>
+        <Label Height="36" Grid.Row="2" FontWeight="Bold" FontSize="20">Conflicts</Label>
+        <StackPanel Orientation="Horizontal">
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Check Conflicts" HorizontalAlignment="Left" />
+        </StackPanel>
+    </StackPanel>
+</Page>

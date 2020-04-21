@@ -8,27 +8,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace AppWindows
 {
     /// <summary>
-    /// Interaction logic for Catalog.xaml
+    /// Interaction logic for HomePage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HomePage : Page
     {
-        public MainWindow()
+        public HomePage()
         {
-            Hide();
-            LandingWindow landing = new LandingWindow();
-            var loaded = landing.ShowDialog();
-            if (loaded.GetValueOrDefault(false) == false)
-            {
-                Close();
-                return;
-            }
-
-            Show();
             InitializeComponent();
         }
     }

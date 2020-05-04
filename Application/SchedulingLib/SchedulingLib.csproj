@@ -3,14 +3,28 @@
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.1;netstandard2.1</TargetFrameworks>
     <OutputType>Library</OutputType>
+    <Nullable>warnings</Nullable>
+    <Version>0.0.1</Version>
+    <Authors>Group 10</Authors>
+    <Company>Group 10</Company>
+    <Product>GradRooAte</Product>
+    <PackageProjectUrl>https://github.com/umkc-cs-451-2020-spring/semester-project-group-10</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/umkc-cs-451-2020-spring/semester-project-group-10</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
   </PropertyGroup>
+  
+  <Target Name="PostBuildScript" AfterTargets="Build" Condition="'$(Configuration)' == 'Release' And '$(TargetFramework)' == 'netstandard2.1'">
+    <Message Text="Copying $(TargetDir)$(TargetFileName) to $(TargetDir)win-x86\$(TargetFileName)" Importance="high" />
+    <Exec Command="copy $(TargetDir)$(TargetFileName) $(TargetDir)win-x86\$(TargetFileName)" />
+  </Target>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.3" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' != 'netstandard2.1'">
+  <ItemGroup Condition="'$(TargetFramework)' != 'netstandard2.1'">
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -23,6 +37,7 @@
 
   <ItemGroup>
     <Folder Include="migrations\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
 
 </Project>

@@ -2,25 +2,68 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <StartWorkingDirectory>$(MSBuildProjectDirectory)</StartWorkingDirectory>
     <UseWPF>true</UseWPF>
     <StartupObject>AppWindows.App</StartupObject>
+    <Version>0.0.1</Version>
+    <Authors>Group 10</Authors>
+    <Product>GradRooAte</Product>
+    <PackageProjectUrl>https://github.com/umkc-cs-451-2020-spring/semester-project-group-10</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/umkc-cs-451-2020-spring/semester-project-group-10</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <Nullable>warnings</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\BlueBook.svg" />
+    <None Remove="Icons\DetailedBook.svg" />
+    <None Remove="Icons\Door.svg" />
+    <None Remove="Icons\Noto\BlueBook.svg" />
+    <None Remove="Icons\Noto\DetailedBook.svg" />
+    <None Remove="Icons\Noto\Door.svg" />
+    <None Remove="Icons\Noto\Modified\Door.svg" />
+    <None Remove="Icons\Noto\Modified\School.svg" />
+    <None Remove="Icons\Noto\School.svg" />
+    <None Remove="Icons\Noto\X_Teacher.svg" />
+    <None Remove="Icons\School.svg" />
+    <None Remove="Icons\VSImageLibrary\NewCatalog.svg" />
+    <None Remove="Icons\VSImageLibrary\OpenFolder.svg" />
+    <None Remove="Icons\X_Teacher.svg" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="SharpVectors.Reloaded" Version="1.5.0" />
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\SchedulingLib\SchedulingLib.csproj" />
+    <ProjectReference Include="..\SchedulingLib\SchedulingLib.csproj">
+      <SetTargetFramework>TargetFramework=netstandard2.1</SetTargetFramework>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <Private>true</Private>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Icons\OpenFolder.svg">
+    <EmbeddedResource Include="Icons\Noto\BlueBook.svg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Icons\NewCatalog.svg">
+    <EmbeddedResource Include="Icons\Noto\DetailedBook.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Noto\Modified\Door.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Noto\Modified\School.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\Noto\X_Teacher.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\VSImageLibrary\NewCatalog.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\VSImageLibrary\OpenFolder.svg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

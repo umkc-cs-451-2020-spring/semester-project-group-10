@@ -5,25 +5,36 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:ctrl="clr-namespace:AppWindows.Controls"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="500"
-      Title="HomePage">
+      Title="HomePage" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
 
     <StackPanel>
-        <Label Height="36" Grid.Row="0" FontWeight="Bold" FontSize="20">Data Entry</Label>
-        <StackPanel Orientation="Horizontal">
-            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Buildings" HorizontalAlignment="Left" />
-            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Rooms" HorizontalAlignment="Left" />
-            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Instructors" HorizontalAlignment="Left" />
-            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Courses" HorizontalAlignment="Left" />
+        <Label Height="36" Grid.Row="0" FontWeight="Bold" FontSize="20" BorderThickness="6,0,0,0">
+            <Label.BorderBrush>
+                <SolidColorBrush Color="#FF99B0D1"/>
+            </Label.BorderBrush> Data Entry
+        </Label>
+        <StackPanel Orientation="Horizontal" Margin="0 0 20 20">
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Buildings" IconSource="Icons/Noto/Modified/School.svg" />
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Rooms" IconSource="Icons/Noto/Modified/Door.svg" />
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Instructors" IconSource="Icons/Noto/X_Teacher.svg" />
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Courses" IconSource="Icons/Noto/BlueBook.svg" />
         </StackPanel>
-        <Label Height="36" Grid.Row="1" FontWeight="Bold" FontSize="20">Scheduling</Label>
-        <StackPanel Orientation="Horizontal">
-            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Classes" HorizontalAlignment="Left"/>
-            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Rules" HorizontalAlignment="Left"/>
+        <Label Height="36" Grid.Row="1" FontWeight="Bold" FontSize="20" BorderThickness="6,0,0,0">
+            <Label.BorderBrush>
+                <SolidColorBrush Color="#FF99D199"/>
+            </Label.BorderBrush> Scheduling
+        </Label>
+        <StackPanel Orientation="Horizontal" Margin="0 0 20 20">
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Classes" IconSource="Icons/Noto/DetailedBook.svg" />
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Rules" />
         </StackPanel>
-        <Label Height="36" Grid.Row="2" FontWeight="Bold" FontSize="20">Conflicts</Label>
-        <StackPanel Orientation="Horizontal">
-            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Check Conflicts" HorizontalAlignment="Left" />
+        <Label Height="36" Grid.Row="2" FontWeight="Bold" FontSize="20" BorderThickness="6,0,0,0">
+            <Label.BorderBrush>
+                <SolidColorBrush Color="#FFD19999"/>
+            </Label.BorderBrush> Conflicts
+        </Label>
+        <StackPanel Orientation="Horizontal" Margin="0 0 20 20">
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Check Conflicts" />
         </StackPanel>
     </StackPanel>
 </Page>

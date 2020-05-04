@@ -4,9 +4,28 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
-             mc:Ignorable="d" MinHeight="120" MinWidth="100">
-    <Grid>
-        <Image MaxHeight="90" Source="{svgc:SvgImage Source=Icons/OpenFolder.svg}" Height="90" VerticalAlignment="Top" HorizontalAlignment="Stretch" Width="90"/>
-        <Label x:Name="buttonLabel" BorderBrush="Black" BorderThickness="0,0,0,1" Content="{Binding Path=ButtonText, ElementName=navButton}" MaxHeight="24" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Height="24" FontSize="16" FontWeight="Bold" Padding="0,0,0,4" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
+             mc:Ignorable="d" MinHeight="120" MinWidth="100" MouseEnter="navButton_MouseEnter" MouseLeave="navButton_MouseLeave" BorderThickness="2,2,2,2" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+    <UserControl.BorderBrush>
+        <LinearGradientBrush EndPoint="0.5,1" Opacity="0.5" SpreadMethod="Pad" StartPoint="0.5,0">
+            <LinearGradientBrush.RelativeTransform>
+                <TransformGroup>
+                    <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                    <RotateTransform Angle="40" CenterY="0.5" CenterX="0.5"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </LinearGradientBrush.RelativeTransform>
+            <GradientStop Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}" Offset="0.317"/>
+            <GradientStop Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}" Offset="1"/>
+            <GradientStop Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
+        </LinearGradientBrush>
+    </UserControl.BorderBrush>
+    <Grid Cursor="Hand">
+        <svgc:SvgViewbox MaxHeight="90" Source="{Binding IconSource, ElementName=navButton, FallbackValue=Icons/VSImageLibrary/OpenFolder.svg}" Height="90" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 5 0 0" Width="90" IsHitTestVisible="False"/>
+        <TextBlock x:Name="buttonLabel" MaxHeight="24" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" FontWeight="Bold" Padding="4,2,4,2" ScrollViewer.VerticalScrollBarVisibility="Disabled" Text="{Binding ButtonText, ElementName=navButton, FallbackValue=Default}" Grid.IsSharedSizeScope="True">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/>
+            </TextBlock.Foreground>
+        </TextBlock>
     </Grid>
 </UserControl>

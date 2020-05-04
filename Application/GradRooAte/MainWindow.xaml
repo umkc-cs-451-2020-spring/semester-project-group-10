@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppWindows"
         mc:Ignorable="d"
-        Title="Catalog" Height="800" Width="1200" ResizeMode="CanResizeWithGrip" SizeToContent="WidthAndHeight" WindowStyle="ThreeDBorderWindow">
+        Title="Catalog" ResizeMode="CanResizeWithGrip" SizeToContent="WidthAndHeight" WindowStyle="ThreeDBorderWindow" Height="44" MinWidth="800" MinHeight="601.1">
     <Grid>
-        <Frame Source="Pages/HomePage.xaml"/>
+        <Frame Source="Pages/HomePage.xaml" Margin="15 15 15 15"/>
 
     </Grid>
 </Window>

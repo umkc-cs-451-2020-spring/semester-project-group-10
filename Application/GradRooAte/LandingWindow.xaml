@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:AppWindows"
         mc:Ignorable="d"
         Title="GradRooAte Startup" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid>
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="3*"/>
@@ -17,20 +17,20 @@
         <Label Content="GradRooAte" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="240" Height="50" FontFamily="Franklin Gothic Heavy" FontSize="36"/>
 
         <StackPanel Margin="10,65,10,10">
-            <Label>
+            <Label MaxHeight="48">
                 <Hyperlink Click="NewProject">
                     <WrapPanel VerticalAlignment="Top">
-                        <Image Source="{svgc:SvgImage Source=NewCatalog.svg}" Height="{Binding ActualHeight, ElementName=newLabel, Mode=OneWay}"/>
-                        <Label x:Name="newLabel" Content="New Local Project" FontSize="16" />
+                        <svgc:SvgViewbox Source="Icons/VSImageLibrary/NewCatalog.svg"/>
+                        <TextBlock x:Name="newLabel" Text="New Local Project" FontSize="16" VerticalAlignment="Bottom" Margin="5,0,0,0" />
                     </WrapPanel>
                 </Hyperlink>
             </Label>
 
-            <Label>
+            <Label MaxHeight="48">
                 <Hyperlink Click="OpenProject">
                     <WrapPanel VerticalAlignment="Top">
-                        <Image Source="{svgc:SvgImage Source=OpenFolder.svg}" Height="{Binding ActualHeight, ElementName=openLabel, Mode=OneWay}"/>
-                        <Label x:Name="openLabel" Content="Open Local Project" FontSize="16" />
+                        <svgc:SvgViewbox Source="Icons/VSImageLibrary/OpenFolder.svg"/>
+                        <TextBlock x:Name="openLabel" Text="Open Local Project" FontSize="16" VerticalAlignment="Bottom" Margin="5,0,0,0" />
                     </WrapPanel>
                 </Hyperlink>
             </Label>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppWindows.Controls;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +22,20 @@ namespace AppWindows
         public HomePage()
         {
             InitializeComponent();
+        }
+
+        private void HomeNavButton_Click(object sender, MouseButtonEventArgs e)
+        {
+            var btn = sender as HomeNavButton;
+            if (btn == null) throw new NullReferenceException();
+            try
+            {
+                NavigationService.Navigate(new Uri($"/Pages/ModelList.xaml", UriKind.Relative));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Exception in navigation: {ex.Message}");
+            }
         }
     }
 }

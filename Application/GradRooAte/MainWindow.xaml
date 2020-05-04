@@ -5,9 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppWindows"
         mc:Ignorable="d"
-        Title="Catalog" ResizeMode="CanResizeWithGrip" SizeToContent="WidthAndHeight" WindowStyle="ThreeDBorderWindow" Height="44" MinWidth="800" MinHeight="601.1">
-    <Grid>
-        <Frame Source="Pages/HomePage.xaml" Margin="15 15 15 15"/>
+        Title="Catalog" ResizeMode="CanResizeWithGrip" SizeToContent="WidthAndHeight" WindowStyle="ThreeDBorderWindow" Height="44" MinWidth="800" MinHeight="600">
 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ToolBar x:Name="navBar" VerticalAlignment="Top" MinHeight="32" IsEnabled="False" Visibility="Collapsed" ToolBarTray.IsLocked="True" ToolBar.OverflowMode="Never">
+            <Button Content="Home Page" HorizontalAlignment="Left" MinWidth="100" HorizontalContentAlignment="Left" Click="Button_Click"/>
+        </ToolBar>
+        <Frame x:Name="navFrame" Source="/Pages/HomePage.xaml" Grid.Row="1" Navigated="Frame_Navigated" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

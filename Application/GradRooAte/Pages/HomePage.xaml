@@ -14,10 +14,10 @@
             </Label.BorderBrush> Data Entry
         </Label>
         <StackPanel Orientation="Horizontal" Margin="0 0 20 20">
-            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Buildings" IconSource="Icons/Noto/Modified/School.svg" />
-            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Rooms" IconSource="Icons/Noto/Modified/Door.svg" />
-            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Instructors" IconSource="Icons/Noto/X_Teacher.svg" />
-            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Courses" IconSource="Icons/Noto/BlueBook.svg" />
+            <ctrl:HomeNavButton Tag="Buildings" Margin="20,5,0,5" ButtonText="Buildings" IconSource="Icons/Noto/Modified/School.svg" Click="HomeNavButton_Click" />
+            <ctrl:HomeNavButton Tag="Rooms" Margin="20,5,0,5" ButtonText="Rooms" IconSource="Icons/Noto/Modified/Door.svg" Click="HomeNavButton_Click" />
+            <ctrl:HomeNavButton Tag="Instructors" Margin="20,5,0,5" ButtonText="Instructors" IconSource="Icons/Noto/X_Teacher.svg" Click="HomeNavButton_Click" />
+            <ctrl:HomeNavButton Tag="Courses" Margin="20,5,0,5" ButtonText="Courses" IconSource="Icons/Noto/BlueBook.svg" Click="HomeNavButton_Click" />
         </StackPanel>
         <Label Height="36" Grid.Row="1" FontWeight="Bold" FontSize="20" BorderThickness="6,0,0,0">
             <Label.BorderBrush>
@@ -26,7 +26,7 @@
         </Label>
         <StackPanel Orientation="Horizontal" Margin="0 0 20 20">
             <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Classes" IconSource="Icons/Noto/DetailedBook.svg" />
-            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Rules" />
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Rules" IconSource="Icons/Noto/Modified/Clipboard.svg" />
         </StackPanel>
         <Label Height="36" Grid.Row="2" FontWeight="Bold" FontSize="20" BorderThickness="6,0,0,0">
             <Label.BorderBrush>
@@ -34,7 +34,7 @@
             </Label.BorderBrush> Conflicts
         </Label>
         <StackPanel Orientation="Horizontal" Margin="0 0 20 20">
-            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Check Conflicts" />
+            <ctrl:HomeNavButton Margin="20,5,0,5" ButtonText="Check Conflicts" IconSource="Icons/Noto/Modified/emoji_u1f4d1.svg" />
         </StackPanel>
     </StackPanel>
 </Page>

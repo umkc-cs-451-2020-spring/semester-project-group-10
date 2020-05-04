@@ -1,0 +1,37 @@
+﻿<Page x:Class="AppWindows.ModelList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:AppWindows"
+      mc:Ignorable="d"
+      d:DesignWidth="600" d:DesignHeight="300">
+
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" VerticalAlignment="Stretch">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <ListView Grid.Row="1" Grid.ColumnSpan="2" Margin="1">
+            <ListView.View>
+                <GridView/>
+            </ListView.View>
+        </ListView>
+        <TextBox x:Name="textBox" Text="" Margin="10,0,10,10" VerticalAlignment="Bottom" Padding="2,4,2,4" TextChanged="textBox_TextChanged" />
+        <Label x:Name="textBoxPlaceholder" Content="Search..." IsHitTestVisible="False"
+               Margin="10,0,10,10" VerticalAlignment="Bottom" Padding="6,4,6,4"
+               Width="{Binding ActualWidth, ElementName=textBox, Mode=OneWay}"
+               Height="{Binding ActualHeight, ElementName=textBox, Mode=OneWay}" FontStyle="Italic" Foreground="#FF3A90CB"
+               />
+        <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,12,10" VerticalAlignment="Bottom">
+            <Button Content="Create" Margin="4 0 4 0" Padding="4" Width="80" />
+            <Button Content="Edit" Margin="4 0 4 0" Padding="4" Width="80" />
+            <Button Content="Delete" Margin="4 0 4 0" Padding="4" Width="80" />
+        </StackPanel>
+
+    </Grid>
+</Page>

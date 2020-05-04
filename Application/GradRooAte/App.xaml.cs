@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -15,12 +16,15 @@ namespace AppWindows
     /// </summary>
     public partial class App : Application
     {
-        private static SchedulerClient scheduler;
+        internal SchedulerClient scheduler;
 
-        void Start(object Sender, StartupEventArgs args)
+        public static App CurrentApp
         {
-            scheduler = LocalScheduler.Connect("./default.grdb");
-            scheduler.NewInstructor(new SchedulingLib.models.Instructor { FirstName = "Foo", LastName = "Bar" });
+            get
+            {
+                return Current as App;
+            }
         }
     }
+
 }

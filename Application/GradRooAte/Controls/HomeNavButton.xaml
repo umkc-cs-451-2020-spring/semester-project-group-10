@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
-             mc:Ignorable="d" MinHeight="120" MinWidth="100" MouseEnter="navButton_MouseEnter" MouseLeave="navButton_MouseLeave" BorderThickness="2,2,2,2" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+             mc:Ignorable="d" MinHeight="120" MinWidth="100" MouseEnter="navButton_MouseEnter" MouseLeave="navButton_MouseLeave" BorderThickness="2,2,2,2" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" MouseDown="navButton_MouseDown" MouseUp="navButton_MouseUp">
     <UserControl.BorderBrush>
         <LinearGradientBrush EndPoint="0.5,1" Opacity="0.5" SpreadMethod="Pad" StartPoint="0.5,0">
             <LinearGradientBrush.RelativeTransform>

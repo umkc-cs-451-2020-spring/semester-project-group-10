@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace AppWindows.Controls
 {
@@ -47,6 +48,9 @@ namespace AppWindows.Controls
             //buttonLabel.DataContext = this;
         }
 
+        private bool clicking = false;
+        public event MouseButtonEventHandler Click;
+
         private void navButton_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
             buttonLabel.TextDecorations.Add(TextDecorations.Underline);
@@ -55,6 +59,21 @@ namespace AppWindows.Controls
         private void navButton_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
             buttonLabel.TextDecorations.Remove(TextDecorations.Underline[0]);
+            if (clicking) clicking = false;
+        }
+
+        private void navButton_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            clicking = true;
+        }
+
+        private void navButton_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (clicking && Click != null)
+            {
+                clicking = false;
+                Click(this, e);
+            }
         }
     }
 }

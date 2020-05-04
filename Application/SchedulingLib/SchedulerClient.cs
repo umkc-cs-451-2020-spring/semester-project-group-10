@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SchedulingLib.models;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace SchedulingLib
 {
@@ -16,6 +19,11 @@ namespace SchedulingLib
         {
             context.Instructors.Add(instructor);
             context.SaveChanges();
+        }
+
+        public async Task<IEnumerable<Instructor>> ListInstructors()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchedulingLib;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,6 +18,8 @@ namespace AppWindows
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static readonly Uri HomePageURI = new Uri("Pages/HomePage.xaml", UriKind.Relative);
+
         public MainWindow()
         {
             Hide();
@@ -28,8 +31,34 @@ namespace AppWindows
                 return;
             }
 
+            App.CurrentApp.scheduler = landing.client;
+
             Show();
             InitializeComponent();
+        }
+
+        private void Frame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+            if (e.Uri.Equals(HomePageURI))
+            {
+                navBar.IsEnabled = false;
+                navBar.Visibility = Visibility.Collapsed;
+            } else
+            {
+                navBar.IsEnabled = true;
+                navBar.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                navFrame.Navigate(HomePageURI);
+            } catch (Exception ex)
+            {
+                MessageBox.Show($"Exception in navigation: {ex.Message}");
+            }
         }
     }
 }

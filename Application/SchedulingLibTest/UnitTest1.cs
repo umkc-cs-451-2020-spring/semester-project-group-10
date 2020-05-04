@@ -1,3 +1,4 @@
+using SchedulerClient;
 using NUnit.Framework;
 
 namespace SchedulingLibTest
@@ -14,5 +15,16 @@ namespace SchedulingLibTest
         {
             Assert.Pass();
         }
+
+        //Test 
+        public void testNewInstructor(){
+
+            NewInstructor obj = new NewInstructor();
+            Assert.IsNotNull(instructor);
+        
+        }
+
     }
+
+    
 }

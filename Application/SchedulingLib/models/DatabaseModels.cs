@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace SchedulingLib.models
@@ -34,7 +36,7 @@ namespace SchedulingLib.models
         public List<Section> Sections { get; set; }
     }
 
-    public class Instructor
+    public class Instructor : INotifyPropertyChanged
     {
         public int InstructorId { get; set; }
         public string FirstName { get; set; }
@@ -44,6 +46,8 @@ namespace SchedulingLib.models
         public string Availability { get; set; }
 
         public List<Section> Sections { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 
     public class Section

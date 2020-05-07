@@ -2,6 +2,8 @@
 using SchedulingLib.models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SchedulingLib
@@ -21,6 +23,7 @@ namespace SchedulingLib
             context.Instructors.Add(instructor);
             context.SaveChanges();
         }
+
 
         public void NewBuilding(Building building)
         {
@@ -109,9 +112,20 @@ namespace SchedulingLib
         }
 
 
-        public async Task<IEnumerable<Instructor>> ListInstructors()
+        public async Task<IEnumerable<Instructor>> ListInstructors(CancellationToken token)
         {
-            throw new NotImplementedException();
+            return await context.Instructors.ToListAsync(token);
+        }
+
+        public async Task<IEnumerable<Instructor>> ListInstructors(string term, CancellationToken token)
+        {
+            if (term.Length == 0) return await ListInstructors(token);
+
+            return await context.Instructors.Where(
+                p => p.FirstName.ToLower().Contains(term) ||
+                p.LastName.ToLower().Contains(term) ||
+                (p.FirstName + " " + p.LastName).ToLower().Contains(term))
+                .ToListAsync();
         }
     }
 }

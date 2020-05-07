@@ -6,6 +6,11 @@
       xmlns:local="clr-namespace:AppWindows"
       mc:Ignorable="d"
       d:DesignWidth="600" d:DesignHeight="300">
+    <Page.Resources>
+        <Style TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        </Style>
+    </Page.Resources>
 
     <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" VerticalAlignment="Stretch">
         <Grid.ColumnDefinitions>
@@ -16,9 +21,9 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
-        <ListView Grid.Row="1" Grid.ColumnSpan="2" Margin="1">
+        <ListView x:Name="listView" Grid.Row="1" Grid.ColumnSpan="2" Margin="1">
             <ListView.View>
-                <GridView/>
+                <GridView x:Name="gridView"/>
             </ListView.View>
         </ListView>
         <TextBox x:Name="textBox" Text="" Margin="10,0,10,10" VerticalAlignment="Bottom" Padding="2,4,2,4" TextChanged="textBox_TextChanged" />

@@ -1,4 +1,5 @@
 ﻿using AppWindows.Controls;
+using SchedulingLib.models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -28,9 +29,10 @@ namespace AppWindows
         {
             var btn = sender as HomeNavButton;
             if (btn == null) throw new NullReferenceException();
+
             try
             {
-                NavigationService.Navigate(new Uri($"/Pages/ModelList.xaml", UriKind.Relative));
+                NavigationService.Navigate(new ModelList(btn.Tag as string));
             }
             catch (Exception ex)
             {

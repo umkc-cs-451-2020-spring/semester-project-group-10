@@ -35,7 +35,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DynamicData" Version="6.14.14" />
     <PackageReference Include="ReactiveUI" Version="11.3.8" />
+    <PackageReference Include="ReactiveUI.WPF" Version="11.3.8" />
     <PackageReference Include="SharpVectors.Reloaded" Version="1.5.0" />
   </ItemGroup>
   
@@ -75,10 +77,6 @@
     <EmbeddedResource Include="Icons\VSImageLibrary\OpenFolder.svg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ViewModels\Instructors\" />
   </ItemGroup>
 
 </Project>

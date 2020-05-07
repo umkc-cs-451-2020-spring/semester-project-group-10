@@ -39,7 +39,7 @@ namespace AppWindows
 
         private void Frame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
         {
-            if (e.Uri.Equals(HomePageURI))
+            if (e.Uri != null && e.Uri.Equals(HomePageURI))
             {
                 navBar.IsEnabled = false;
                 navBar.Visibility = Visibility.Collapsed;
